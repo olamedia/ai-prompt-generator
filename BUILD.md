@@ -86,6 +86,7 @@ The generated application installers and packages will be placed in the `release
 *   **macOS:** Building `.dmg` files and especially signing the application for distribution *requires* you to run the build process on a macOS machine with Xcode and appropriate certificates installed.
 *   **Windows:** Building `.exe` installers using NSIS generally works best when run on a Windows machine. Code signing requires a Windows environment and a valid certificate.
 *   **Linux:**
+    See https://www.electron.build/multi-platform-build#linux
     *   Building `.deb` packages might require `fakeroot` and `dpkg` to be installed.
     *   Building `.rpm` packages might require `rpmbuild`. 
         ```bash
