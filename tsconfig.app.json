@@ -1,0 +1,13 @@
+{
+    "extends": "./tsconfig.json", // Inherit base settings
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "exclude": ["node_modules", "dist", "src/electron"], // Exclude electron code
+    "compilerOptions": {
+      "composite": true, // Often needed when extending
+      "baseUrl": ".",
+      "paths": { // Ensure paths match if you use aliases
+        "@app/*": ["src/app/*"]
+      }
+      // No "noEmit" here, handled by vue-tsc command line flag
+    }
+  }

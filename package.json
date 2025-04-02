@@ -1,0 +1,85 @@
+{
+  "name": "ai-prompt-generator",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/electron/main.js",
+  "author": {
+    "name": "olamedia",
+    "email": "olamedia@gmail.com"
+  },
+  "description": "Streamline your AI workflow! Select project files, add instructions, and instantly generate context-rich prompts without manual copy-pasting.",
+  "homepage": "https://github.com/olamedia/ai-prompt-generator",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit -p tsconfig.app.json && vite build",
+    "preview": "vite preview --outDir dist/renderer",
+    "package": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build:package": "npm run build && npm run package",
+    "build:dist": "npm run build && npm run dist"
+  },
+  "dependencies": {
+    "@electron-toolkit/utils": "^4.0.0",
+    "@primeuix/themes": "^1.0.0",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.3.3",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6",
+    "vite-plugin-electron": "^0.28.8",
+    "vite-plugin-electron-renderer": "^0.14.6",
+    "vue-tsc": "^2.0.26",
+    "wait-on": "^8.0.3"
+  },
+  "build": {
+    "appId": "com.yourcompany.aipromptgenerator",
+    "productName": "AIPromptGenerator",
+    
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/electron/**/*",
+      "dist/renderer/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "mac": {
+      "icon": "build/icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "linux": {
+      "icon": "build/icon.png",
+      "category": "Development",
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

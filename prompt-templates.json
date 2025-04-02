@@ -1,0 +1,17 @@
+[
+    "Find potential bugs and errors (e.g., null pointers, off-by-one errors).",
+    "Check for adherence to SOLID principles.",
+    "Identify security vulnerabilities (e.g., SQL injection, XSS, insecure configurations).",
+    "Suggest performance optimizations (e.g., inefficient loops, unnecessary computations).",
+    "Review code style and formatting consistency (mention specific guidelines if any).",
+    "Look for unclear or ambiguous variable/function names.",
+    "Check for missing or inadequate error handling (try-catch blocks, validation).",
+    "Write comprehensive documentation (docstrings/comments) for the selected code.",
+    "Explain this code snippet simply.",
+    "Check for hardcoded secrets or sensitive data.",
+    "Review asynchronous code patterns (async/await, promises, callbacks).",
+    "Assess test coverage and suggest missing test cases.",
+    "Refactor this code for better readability and maintainability.",
+    "Check for compliance with OWASP Top 10 vulnerabilities.",
+    "Verify correct usage of [Specify Framework/Library, e.g., React Hooks, Spring Boot annotations]."
+  ]
