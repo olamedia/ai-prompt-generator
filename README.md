@@ -45,6 +45,10 @@ Streamline your AI workflow! Select project files, add instructions, and instant
     ```
     This will launch the Electron application with hot-reloading for the renderer process.
 
+## Building from Source
+
+For instructions on how to build installable binaries from the source code for different operating systems, please see the [**BUILD.md**](BUILD.md) file.
+
 ## Usage (How to Use the Application)
 
 1.  Launch the AI Prompt Generator application.
